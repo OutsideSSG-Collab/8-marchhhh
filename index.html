@@ -793,6 +793,74 @@
     .collage-frame-2 {
         height: 75%;
     }
+/* Стили для видео */
+.video-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: min(20px, 3vh);
+    height: 100%;
+    width: 100%;
+    padding: min(10px, 1.5vh) 0;
+}
+
+.video-container {
+    width: 100%;
+    max-height: 75%;
+    background: #fff5ea;
+    border-radius: max(20px, 2.5vw);
+    padding: min(10px, 1.5vh);
+    box-shadow: 0 max(8px, 1vh) 0 #e5cfb5, 0 15px 25px rgba(180, 140, 110, 0.2);
+    border: 2px solid #f5dec5;
+    overflow: hidden;
+}
+
+.book-video {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    border-radius: max(15px, 2vw);
+    border: 3px solid #fff5ea;
+    background: #ecd6b5;
+    display: block;
+    outline: none;
+}
+
+.book-video:focus {
+    outline: none;
+}
+
+.video-caption {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    color: #dbb48b;
+    text-align: center;
+    margin-top: min(5px, 1vh);
+    text-shadow: 1px 1px 0 #fff5ea;
+}
+
+/* Адаптация для мобильных */
+@media screen and (max-width: 768px) {
+    .video-container {
+        max-height: 70%;
+        padding: 8px;
+    }
+    
+    .video-caption {
+        font-size: 4.5vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .video-container {
+        max-height: 65%;
+        padding: 6px;
+    }
+    
+    .book-video {
+        border-width: 2px;
+    }
 }
     </style>
 </head>
@@ -1010,18 +1078,29 @@
     </div>
 </div>
                 
-                <!-- СТРАНИЦА 7 - Пустая для фото -->
-                <div class="page empty" id="page7">
-                    <div class="photo-page">
-                        <div class="photo-frame">
-                            <div class="photo-placeholder" style="font-size: min(5rem, 15vw); color: #e5cfb5;">✨</div>
-                        </div>
-                        <div class="photo-caption">
-                            для новых воспоминаний
-                        </div>
-                    </div>
-                </div>
-                
+                <!-- СТРАНИЦА 7 - Видео -->
+<div class="page empty" id="page7">
+    <div class="page-header">
+        <span>🌸 наше видео</span>
+        <span class="page-number">7</span>
+    </div>
+    <div class="video-page">
+        <div class="video-container">
+            <video 
+                class="book-video" 
+                controls 
+                preload="metadata"
+                poster="https://raw.githubusercontent.com/SashasDrugar/maria-book/main/images/photo1.jpg">
+                <!-- ПОСТАВЬ СВОЮ ССЫЛКУ НА ВИДЕО В СТРОКУ НИЖЕ -->
+                <source src="https://raw.githubusercontent.com/SashasDrugar/maria-book/main/videos/video1.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
+        <div class="video-caption">
+            наш самый тёплый момент
+        </div>
+    </div>
+</div>
                 <!-- СТРАНИЦА 8 - Пустая для фото -->
                 <div class="page empty" id="page8">
                     <div class="photo-page">
@@ -1247,6 +1326,7 @@
 </body>
 
 </html>
+
 
 
 
