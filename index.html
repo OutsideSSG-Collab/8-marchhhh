@@ -793,73 +793,138 @@
     .collage-frame-2 {
         height: 75%;
     }
-/* Стили для видео */
+/* Стили для видео - полностью адаптивные */
 .video-page {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    padding: 10px 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.video-wrapper {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: min(20px, 3vh);
-    height: 100%;
+    align-items: center;
     width: 100%;
-    padding: min(10px, 1.5vh) 0;
+    height: 100%;
+    gap: clamp(10px, 2vh, 20px);
 }
 
 .video-container {
     width: 100%;
-    max-height: 75%;
+    max-width: 600px;
+    margin: 0 auto;
     background: #fff5ea;
-    border-radius: max(20px, 2.5vw);
-    padding: min(10px, 1.5vh);
-    box-shadow: 0 max(8px, 1vh) 0 #e5cfb5, 0 15px 25px rgba(180, 140, 110, 0.2);
+    border-radius: clamp(15px, 3vw, 25px);
+    padding: clamp(6px, 1.5vh, 12px);
+    box-shadow: 0 max(5px, 0.8vh) 0 #e5cfb5, 0 10px 20px rgba(180, 140, 110, 0.15);
     border: 2px solid #f5dec5;
-    overflow: hidden;
 }
 
 .book-video {
     width: 100%;
     height: auto;
-    max-height: 100%;
-    border-radius: max(15px, 2vw);
-    border: 3px solid #fff5ea;
+    aspect-ratio: 16 / 9;
+    border-radius: clamp(10px, 2vw, 18px);
+    border: 2px solid #fff5ea;
     background: #ecd6b5;
     display: block;
-    outline: none;
-}
-
-.book-video:focus {
-    outline: none;
+    object-fit: cover;
 }
 
 .video-caption {
     font-family: 'Great Vibes', cursive;
-    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-size: clamp(1.2rem, 4vw, 2rem);
     color: #dbb48b;
     text-align: center;
-    margin-top: min(5px, 1vh);
+    margin-top: clamp(5px, 1vh, 10px);
     text-shadow: 1px 1px 0 #fff5ea;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
-/* Адаптация для мобильных */
+/* Специальные стили для мобильных устройств */
 @media screen and (max-width: 768px) {
-    .video-container {
-        max-height: 70%;
-        padding: 8px;
+    .video-wrapper {
+        justify-content: flex-start;
+        padding-top: 15px;
     }
     
-    .video-caption {
-        font-size: 4.5vw;
-    }
-}
-
-@media screen and (max-width: 480px) {
     .video-container {
-        max-height: 65%;
-        padding: 6px;
+        width: 95%;
+        padding: 8px;
+        box-shadow: 0 6px 0 #e5cfb5, 0 8px 15px rgba(180, 140, 110, 0.15);
     }
     
     .book-video {
         border-width: 2px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .video-wrapper {
+        justify-content: flex-start;
+        padding-top: 10px;
+        gap: 8px;
+    }
+    
+    .video-container {
+        width: 100%;
+        padding: 5px;
+        border-radius: 18px;
+        box-shadow: 0 4px 0 #e5cfb5, 0 6px 12px rgba(180, 140, 110, 0.15);
+    }
+    
+    .book-video {
+        border-radius: 15px;
+        border-width: 1.5px;
+    }
+    
+    .video-caption {
+        font-size: 1.3rem;
+        margin-top: 5px;
+    }
+}
+
+/* Для очень маленьких экранов */
+@media screen and (max-width: 360px) {
+    .video-container {
+        padding: 4px;
+        border-radius: 15px;
+    }
+    
+    .book-video {
+        border-radius: 12px;
+    }
+    
+    .video-caption {
+        font-size: 1.1rem;
+    }
+}
+
+/* Поддержка landscape ориентации */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .video-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    .video-container {
+        width: 60%;
+        max-width: 400px;
+    }
+    
+    .video-caption {
+        width: 30%;
+        font-size: 1.5rem;
+        margin: 0;
     }
 }
     </style>
@@ -1325,6 +1390,7 @@
 </body>
 
 </html>
+
 
 
 
