@@ -40,7 +40,7 @@
         }
         
         body::before {
-            content: "🌸🌼🌸🌼🌸🌼🌸🌸🌼🌸🌼🌸🌼🌸🌸🌼🌸🌼🌸🌼🌸🌸🌼🌸🌼🌸🌼🌸🌸🌼🌸🌼🌸🌼🌸🌸🌼🌸🌼🌸🌼🌸🌸🌼🌸🌼🌸🌼🌸🌸🌼🌸🌼🌸🌼🌸";
+            content: "🌸🌼🌸🌼🌸🌼🌸";
             position: absolute;
             top: 20px;
             left: 0;
@@ -725,158 +725,93 @@
                 width: 40px;
                 height: 40px;
             }
+        }
+        
         /* Стили для коллажа из 2 фото */
-.collage-grid-2 {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: min(25px, 3vh);
-    width: 100%;
-    height: 100%;
-    padding: min(10px, 1.5vh) 0;
-}
-
-.collage-item-2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: min(10px, 1.5vh);
-    height: 45%;
-}
-
-.collage-frame-2 {
-    width: 100%;
-    height: 80%;
-    background: #fff5ea;
-    border-radius: max(20px, 2.5vw);
-    padding: min(8px, 1.2vh);
-    box-shadow: 0 max(8px, 1vh) 0 #e5cfb5, 0 10px 20px rgba(180, 140, 110, 0.15);
-    border: 2px solid #f5dec5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.collage-photo-2 {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: max(15px, 2vw);
-    border: 2px solid #fff5ea;
-}
-
-.collage-caption-2 {
-    font-family: 'Great Vibes', cursive;
-    font-size: clamp(1.3rem, 3.5vw, 1.8rem);
-    color: #dbb48b;
-    text-align: center;
-    text-shadow: 1px 1px 0 #fff5ea;
-    word-break: break-word;
-}
-
-/* Адаптация для мобильных */
-@media screen and (max-width: 768px) {
-    .collage-item-2 {
-        height: 40%;
-    }
-    
-    .collage-caption-2 {
-        font-size: 4vw;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .collage-item-2 {
-        height: 38%;
-    }
-    
-    .collage-frame-2 {
-        height: 75%;
-    }
-
-/* ========== УПРОЩЁННЫЕ СТИЛИ ДЛЯ ВИДЕО ========== */
-.simple-video-page {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-}
-
-.simple-video-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.simple-video {
-    width: 90%;
-    max-width: 350px;
-    height: auto;
-    border-radius: 18px;
-    border: 3px solid #fff5ea;
-    box-shadow: 0 8px 0 #e5cfb5, 0 12px 20px rgba(180, 140, 110, 0.2);
-    background: #ecd6b5;
-}
-
-.simple-video-caption {
-    font-family: 'Great Vibes', cursive;
-    font-size: 1.5rem;
-    color: #dbb48b;
-    text-align: center;
-    text-shadow: 1px 1px 0 #fff5ea;
-    width: 90%;
-    max-width: 350px;
-    word-wrap: break-word;
-}
-
-/* Стили только для маленьких телефонов */
-@media screen and (max-width: 480px) {
-    .simple-video {
-        width: 95%;
-        max-width: 300px;
-        border-radius: 15px;
-        border-width: 2px;
-        box-shadow: 0 5px 0 #e5cfb5;
-    }
-    
-    .simple-video-caption {
-        font-size: 1.3rem;
-        max-width: 300px;
-    }
-}
-
-@media screen and (max-width: 360px) {
-    .simple-video {
-        max-width: 260px;
-    }
-    
-    .simple-video-caption {
-        font-size: 1.1rem;
-    }
-}
+        .collage-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: min(25px, 3vh);
+            width: 100%;
+            height: 100%;
+            padding: min(10px, 1.5vh) 0;
+        }
+        
+        .collage-item-2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: min(10px, 1.5vh);
+            height: 45%;
+        }
+        
+        .collage-frame-2 {
+            width: 100%;
+            height: 80%;
+            background: #fff5ea;
+            border-radius: max(20px, 2.5vw);
+            padding: min(8px, 1.2vh);
+            box-shadow: 0 max(8px, 1vh) 0 #e5cfb5, 0 10px 20px rgba(180, 140, 110, 0.15);
+            border: 2px solid #f5dec5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .collage-photo-2 {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: max(15px, 2vw);
+            border: 2px solid #fff5ea;
+        }
+        
+        .collage-caption-2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+            color: #dbb48b;
+            text-align: center;
+            text-shadow: 1px 1px 0 #fff5ea;
+            word-break: break-word;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .collage-item-2 {
+                height: 40%;
+            }
+            .collage-caption-2 {
+                font-size: 4vw;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .collage-item-2 {
+                height: 38%;
+            }
+            .collage-frame-2 {
+                height: 75%;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Невидимый аудиоплеер с музыкой -->
     <audio id="bgMusic" loop preload="auto" style="display: none;">
-  <source src="music.mp3" type="audio/mpeg">
-</audio>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
     
     <!-- КНИГА -->
     <div class="book" id="book">
+        <!-- Текст на корешке -->
+        <div class="spine-text">8 МАРТА • 2026</div>
+        
         <!-- Обложка -->
         <div class="cover closed" id="cover">
             <div class="cover-decoration">
-                <div class="cover-title">ПОЗДРАВЛЯЮ С 8 МАРТА</div>
-                <div class="cover-subtitle">Для Марии</div>
-                <div class="cover-flowers">🌹 🌸 🌹🌸🌹 🌸 🌹</div>
+                <div class="cover-title">8 марта</div>
+                <div class="cover-subtitle">для Марии</div>
+                <div class="cover-flowers">🌹 🌸 🌹</div>
             </div>
             <div class="open-heart" id="openHeart">
                 💗
@@ -889,22 +824,25 @@
                 <!-- СТРАНИЦА 1 - Вступление и стихи -->
                 <div class="page active" id="page1">
                     <div class="page-header">
-                        <span>🌸 Страница первая</span>
+                        <span>🌸 страница первая</span>
                         <span class="page-number">1</span>
                     </div>
                     <div class="page-content">
                         <div class="poem">
-                            <p>В этот день прекрасный день,</p>
-                            <p>Для моей <span class="maria-name">Марии</span> всё всё всё</p>
+                            <p>В этот день весенний, светлый,</p>
+                            <p>Для <span class="maria-name">Марии</span> все цветы,</p>
                             <p>Самой нежной, самой милой,</p>
-                            <p>Воплощенье настоящей красоты.</p>
+                            <p>Воплощенье красоты.</p>
                         </div>
                         
-                        <div class="flower-divider">✽ ✾ ✿ ❀ ✽ ✾ ✿ ❀ ✽</div>
+                        <div class="flower-divider">✽ ✾ ✿ ❀ ✽</div>
                         
+                        <p style="font-size: clamp(1.2rem, 3vw, 1.5rem); text-align: justify; text-indent: 2rem;">
+                            <span style="font-size: clamp(2.5rem, 6vw, 3.5rem); float: left; line-height: 0.8; margin-right: 10px; color: #dbb48b;">М</span>илая Мария, в этой книге я оставил для тебя самые искренние пожелания. А дальше — чистые страницы для наших совместных фотографий и воспоминаний.
+                        </p>
                         
                         <div style="text-align: center; margin: 40px 0 20px;">
-                            <span style="font-size: clamp(2rem, 5vw, 3rem); letter-spacing: 15px;">🌷 ✿ 🌷✿ 🌷✿ 🌷✿ 🌷</span>
+                            <span style="font-size: clamp(2rem, 5vw, 3rem); letter-spacing: 15px;">🌷 ✿ 🌷</span>
                         </div>
                     </div>
                 </div>
@@ -912,40 +850,43 @@
                 <!-- СТРАНИЦА 2 - Пожелания -->
                 <div class="page" id="page2">
                     <div class="page-header">
-                        <span>🌸 Страница вторая</span>
+                        <span>🌸 страница вторая</span>
                         <span class="page-number">2</span>
                     </div>
                     <div class="page-content">
-                        <h2 style="color:#dbb48b; text-align:center; margin-bottom:25px; font-size: clamp(1.5rem, 4vw, 2.3rem); border-bottom: 2px solid #f5dec5; padding-bottom: 15px;">Желаю тебе:</h2>
+                        <h2 style="color:#dbb48b; text-align:center; margin-bottom:25px; font-size: clamp(1.5rem, 4vw, 2.3rem); border-bottom: 2px solid #f5dec5; padding-bottom: 15px;">Что я желаю тебе</h2>
                         
                         <div class="wish-grid">
                             <div class="wish-card">
                                 <span class="wish-emoji">🌹</span>
                                 <strong>Нежности</strong><br>
-                                будь всегда собой и не слушай никого
+                                будь всегда собой
                             </div>
                             <div class="wish-card">
                                 <span class="wish-emoji">✨</span>
                                 <strong>Света</strong><br>
-                                мой самый яркий лучик
+                                мой яркий лучик
                             </div>
                             <div class="wish-card">
                                 <span class="wish-emoji">💗</span>
                                 <strong>Любви</strong><br>
-                                Хочу быть навсегда твоим
+                                навсегда твой
                             </div>
                             <div class="wish-card">
                                 <span class="wish-emoji">🌼</span>
                                 <strong>Радости</strong><br>
-                                старайся чаще радоваться всему
+                                каждый день
                             </div>
                         </div>
                         
-                        <div class="flower-divider">🌺  🌸  🌺 🌸  🌺 🌸  🌺</div>
+                        <div class="flower-divider">🌺 ✿ 🌸 ✿ 🌺</div>
                         
+                        <p style="font-size: clamp(1.4rem, 3.5vw, 1.8rem); text-align: center; font-style: italic; margin-top: 30px;">
+                            "Пусть весна в душе цветет"
+                        </p>
                         
                         <p style="text-align: right; font-size: clamp(1.2rem, 3vw, 1.5rem); margin-top: 40px; color: #b5967a;">
-                            Твой парень навсегда
+                            Твой навсегда
                         </p>
                     </div>
                 </div>
@@ -953,23 +894,23 @@
                 <!-- СТРАНИЦА 3 - Ваше фото -->
                 <div class="page empty" id="page3">
                     <div class="page-header">
-                        <span>🌸 Страница третья</span>
+                        <span>🌸 страница третья</span>
                         <span class="page-number">3</span>
                     </div>
                     <div class="photo-page">
                         <div class="photo-frame">
-                            <img src="https://raw.githubusercontent.com/OutsideSSG-Collab/8-marchhhh/main/images/photo1.jpg" alt="Наше фото" class="book-photo">
+                            <img src="https://raw.githubusercontent.com/OutsideSSG-Collab/8-marchhhh/main/images/photo1.jpg" alt="Наше фото" class="book-photo" loading="lazy">
                         </div>
                         <div class="photo-caption">
-                            моё самое любимое совместное фото (побольше бы таких)
+                            наше первое совместное фото
                         </div>
                     </div>
                 </div>
                 
-                <!-- СТРАНИЦА 4 - Коллаж -->
+                <!-- СТРАНИЦА 4 - Коллаж из 4 фото -->
                 <div class="page empty" id="page4">
                     <div class="page-header">
-                        <span>🌸 Страница четвёртая</span>
+                        <span>🌸 страница четвертая</span>
                         <span class="page-number">4</span>
                     </div>
                     <div class="collage-page">
@@ -977,125 +918,134 @@
                             <!-- Фото 1 -->
                             <div class="collage-item">
                                 <div class="collage-frame">
-                                    <img src="images/photo2.jpg" alt="Наше фото" class="book-photo">
+                                    <img src="https://raw.githubusercontent.com/OutsideSSG-Collab/8-marchhhh/main/images/photo2.jpg" alt="Фото 1" class="collage-photo" loading="lazy">
                                 </div>
-                                <div class="collage-caption">моя пикми пикми девочка</div>
+                                <div class="collage-caption">моя пикми девочка</div>
                             </div>
                             <!-- Фото 2 -->
                             <div class="collage-item">
                                 <div class="collage-frame">
-                                    <img src="images/photo3.jpg" alt="Наше фото" class="book-photo">
+                                    <img src="https://raw.githubusercontent.com/OutsideSSG-Collab/8-marchhhh/main/images/photo3.jpg" alt="Фото 2" class="collage-photo" loading="lazy">
                                 </div>
-                                <div class="collage-caption">математика уже достала...</div>
+                                <div class="collage-caption">математика достала...</div>
                             </div>
                             <!-- Фото 3 -->
                             <div class="collage-item">
                                 <div class="collage-frame">
-                                    <img src="images/photo4.jpg" alt="Наше фото" class="book-photo">
+                                    <img src="https://raw.githubusercontent.com/OutsideSSG-Collab/8-marchhhh/main/images/photo4.jpg" alt="Фото 3" class="collage-photo" loading="lazy">
                                 </div>
                                 <div class="collage-caption">концерт кая</div>
                             </div>
                             <!-- Фото 4 -->
                             <div class="collage-item">
                                 <div class="collage-frame">
-                                    <img src="images/photo5.jpg" alt="Наше фото" class="book-photo">
+                                    <img src="https://raw.githubusercontent.com/OutsideSSG-Collab/8-marchhhh/main/images/photo5.jpg" alt="Фото 4" class="collage-photo" loading="lazy">
                                 </div>
-                                <div class="collage-caption">ути-путичка мимими</div>
+                                <div class="collage-caption">ути-путичка</div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- СТРАНИЦА 5 - коллаж из 4 фото -->
-<div class="page empty" id="page4">
-    <div class="page-header">
-        <span>🌸 Страница пятая</span>
-        <span class="page-number">5</span>
-    </div>
-    <div class="collage-page">
-        <div class="collage-grid">
-            <!-- Фото 1 -->
-            <div class="collage-item">
-                <div class="collage-frame">
-                     <img src="images/photo6.jpg" alt="Наше фото" class="book-photo">
+                <!-- СТРАНИЦА 5 - Еще 4 фото -->
+                <div class="page empty" id="page5">
+                    <div class="page-header">
+                        <span>🌸 страница пятая</span>
+                        <span class="page-number">5</span>
+                    </div>
+                    <div class="collage-page">
+                        <div class="collage-grid">
+                            <!-- Фото 1 -->
+                            <div class="collage-item">
+                                <div class="collage-frame">
+                                    <img src="https://raw.githubusercontent.com/OutsideSSG-Collab/8-marchhhh/main/images/photo6.jpg" alt="Фото 6" class="collage-photo" loading="lazy">
+                                </div>
+                                <div class="collage-caption">целуй меня в щёку</div>
+                            </div>
+                            <!-- Фото 2 -->
+                            <div class="collage-item">
+                                <div class="collage-frame">
+                                    <img src="https://raw.githubusercontent.com/OutsideSSG-Collab/8-marchhhh/main/images/photo7.jpg" alt="Фото 7" class="collage-photo" loading="lazy">
+                                </div>
+                                <div class="collage-caption">в шоке от твоей красоты</div>
+                            </div>
+                            <!-- Фото 3 -->
+                            <div class="collage-item">
+                                <div class="collage-frame">
+                                    <img src="https://raw.githubusercontent.com/OutsideSSG-Collab/8-marchhhh/main/images/photo8.jpg" alt="Фото 8" class="collage-photo" loading="lazy">
+                                </div>
+                                <div class="collage-caption">моя моя моя</div>
+                            </div>
+                            <!-- Фото 4 -->
+                            <div class="collage-item">
+                                <div class="collage-frame">
+                                    <img src="https://raw.githubusercontent.com/OutsideSSG-Collab/8-marchhhh/main/images/photo9.jpg" alt="Фото 9" class="collage-photo" loading="lazy">
+                                </div>
+                                <div class="collage-caption">...</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="collage-caption">целуй меня в щёку, целуй меня в губы)</div>
-            </div>
-            
-            <!-- Фото 2 -->
-            <div class="collage-item">
-                <div class="collage-frame">
-                    <img src="images/photo7.jpg" alt="Наше фото" class="book-photo"> 
-                </div>
-                <div class="collage-caption">всегда в шоке с твоей красоты</div>
-            </div>
-            
-            <!-- Фото 3 -->
-            <div class="collage-item">
-                <div class="collage-frame">
-                     <img src="images/photo8.jpg" alt="Наше фото" class="book-photo">
-                </div>
-                <div class="collage-caption">моя моя моя)</div>
-            </div>
-            
-            <!-- Фото 4 -->
-            <div class="collage-item">
-                <div class="collage-frame">
-                    <img src="images/photo9.jpg" alt="Наше фото" class="book-photo"> 
-
-                </div>
-                <div class="collage-caption">Э</div>
-            </div>
-        </div>
-    </div>
-</div>
                 
-               <!-- СТРАНИЦА 6 - Коллаж из 2 фото -->
-<div class="page empty" id="page6">
-    <div class="page-header">
-        <span>🌸 Страница шестая</span>
-        <span class="page-number">6</span>
-    </div>
-    <div class="collage-page">
-        <div class="collage-grid">
-            <!-- Фото 1 -->
-            <div class="collage-item">
-                <div class="collage-frame">
-                     <img src="images/photo13.jpg" alt="Наше фото" class="book-photo">
+                <!-- СТРАНИЦА 6 - Коллаж из 2 фото -->
+                <div class="page empty" id="page6">
+                    <div class="page-header">
+                        <span>🌸 страница шестая</span>
+                        <span class="page-number">6</span>
+                    </div>
+                    <div class="collage-page">
+                        <div class="collage-grid">
+                            <!-- Фото 1 -->
+                            <div class="collage-item">
+                                <div class="collage-frame">
+                                    <img src="https://raw.githubusercontent.com/OutsideSSG-Collab/8-marchhhh/main/images/photo13.jpg" alt="Фото 13" class="collage-photo" loading="lazy">
+                                </div>
+                                <div class="collage-caption">глаза, в которых тону</div>
+                            </div>
+                            <!-- Фото 2 -->
+                            <div class="collage-item">
+                                <div class="collage-frame">
+                                    <img src="https://raw.githubusercontent.com/OutsideSSG-Collab/8-marchhhh/main/images/photo11.jpg" alt="Фото 11" class="collage-photo" loading="lazy">
+                                </div>
+                                <div class="collage-caption">мыыыы</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="collage-caption">Глаза в которых готов тонуть вечность</div>
-            </div>
-            
-            <!-- Фото 2 -->
-            <div class="collage-item">
-                <div class="collage-frame">
-                     <img src="images/photo11.jpg" alt="Наше фото" class="book-photo">
-                </div>
-                <div class="collage-caption">мыыыыыы</div>
-            </div>
-        </div>
-    </div>
-</div>
                 
-<!-- СТРАНИЦА 7 - ВИДЕО (УПРОЩЁННАЯ) -->
-<div class="page empty" id="page7">
-    <div class="simple-video-page">
-        <div class="simple-video-container">
-            <video 
-                class="simple-video" 
-                controls
-                playsinline
-                webkit-playsinline
-                poster="https://raw.githubusercontent.com/SashasDrugar/maria-book/main/images/photo1.jpg">
-                <source src="https://raw.githubusercontent.com/OutsideSSG-Collab/8-marchhhh/refs/heads/main/videos/videos1.mp4" type="video/mp4">
-            </video>
-            <div class="simple-video-caption">наш самый тёплый момент</div>
-        </div>
-    </div>
-</div>
-</div>
-                <!-- СТРАНИЦА 8 - Пустая для фото -->
+                <!-- СТРАНИЦА 7 - КРАСИВОЕ ПОЗДРАВЛЕНИЕ (ВМЕСТО ВИДЕО) -->
+                <div class="page empty" id="page7">
+                    <div class="page-header">
+                        <span>🌸 страница седьмая</span>
+                        <span class="page-number">7</span>
+                    </div>
+                    <div class="page-content" style="display: flex; flex-direction: column; justify-content: center; height: 100%;">
+                        <div class="poem" style="margin: 15px 0;">
+                            <p>Спасибо, что ты есть у меня,</p>
+                            <p>Моя любимая Мария.</p>
+                            <p>Ты — свет в моём окне,</p>
+                            <p>Ты — счастье моё земное.</p>
+                            <br>
+                            <p>С 8 марта, моя родная,</p>
+                            <p>Самая нежная и дорогая.</p>
+                            <p>Пусть каждый день будет прекрасным,</p>
+                            <p>А я буду рядом — настоящим счастьем.</p>
+                        </div>
+                        
+                        <div class="flower-divider">🌷 🌸 🌷 🌸 🌷</div>
+                        
+                        <p style="text-align: right; font-size: 2.2rem; font-family: 'Great Vibes', cursive; color: #dbb48b; margin-top: 20px;">
+                            Твой навсегда
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- СТРАНИЦА 8 - Пустая -->
                 <div class="page empty" id="page8">
+                    <div class="page-header">
+                        <span>🌸 страница восьмая</span>
+                        <span class="page-number">8</span>
+                    </div>
                     <div class="photo-page">
                         <div class="photo-frame">
                             <div class="photo-placeholder" style="font-size: min(5rem, 15vw); color: #e5cfb5;">📖</div>
@@ -1118,7 +1068,6 @@
     <!-- Скрипт для книги и музыки -->
     <script>
         (function() {
-            // Элементы книги
             const cover = document.getElementById('cover');
             const openHeart = document.getElementById('openHeart');
             const pages = document.querySelectorAll('.page');
@@ -1133,7 +1082,6 @@
             let touchEndX = 0;
             let isSwiping = false;
             
-            // Функция запуска музыки
             function startMusic() {
                 if (bgMusic) {
                     bgMusic.play().catch(e => {
@@ -1142,7 +1090,6 @@
                 }
             }
             
-            // Анимация перелистывания
             function animatePageFlip() {
                 const currentActivePage = document.querySelector('.page.active');
                 if (currentActivePage) {
@@ -1153,7 +1100,6 @@
                 }
             }
             
-            // Обновление активной страницы
             function updatePages() {
                 pages.forEach((page, index) => {
                     if (index === currentPage) {
@@ -1167,7 +1113,6 @@
                 nextBtn.disabled = currentPage === totalPages - 1;
             }
             
-            // Открытие книги
             function openBook() {
                 if (cover.classList.contains('closed')) {
                     cover.classList.remove('closed');
@@ -1175,7 +1120,6 @@
                     openHeart.style.opacity = '0';
                     openHeart.style.pointerEvents = 'none';
                     
-                    // Нежный цветочный дождик
                     const flowerCount = window.innerWidth < 768 ? 8 : 15;
                     for (let i = 0; i < flowerCount; i++) {
                         setTimeout(() => {
@@ -1197,7 +1141,6 @@
                 }
             }
             
-            // Добавляем стили для анимации падения
             const style = document.createElement('style');
             style.innerHTML = `
                 @keyframes fall {
@@ -1207,7 +1150,6 @@
             `;
             document.head.appendChild(style);
             
-            // Обработка свайпов
             pageSlider.addEventListener('touchstart', (e) => {
                 touchStartX = e.changedTouches[0].screenX;
                 isSwiping = true;
@@ -1230,7 +1172,6 @@
                 
                 if (Math.abs(diffX) > swipeThreshold) {
                     if (diffX > 0) {
-                        // Свайп вправо - предыдущая страница
                         if (currentPage > 0) {
                             animatePageFlip();
                             setTimeout(() => {
@@ -1239,7 +1180,6 @@
                             }, 200);
                         }
                     } else {
-                        // Свайп влево - следующая страница
                         if (currentPage < totalPages - 1) {
                             animatePageFlip();
                             setTimeout(() => {
@@ -1251,7 +1191,6 @@
                 }
             }
             
-            // Обработчики событий
             openHeart.addEventListener('click', (e) => {
                 e.stopPropagation();
                 openBook();
@@ -1287,7 +1226,6 @@
                 startMusic();
             });
             
-            // Клавиши клавиатуры
             document.addEventListener('keydown', (e) => {
                 if (cover.classList.contains('open')) {
                     if (e.key === 'ArrowRight') {
@@ -1312,26 +1250,8 @@
                 }
             });
             
-            // Инициализация
             updatePages();
         })();
     </script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
